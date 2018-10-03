@@ -38,13 +38,14 @@ export default class App extends React.Component {
               <View id="thumbnail" style={{ width: 350, height: 180, backgroundColor: 'pink' }}></View>
               <Text id="adress" style={{ width: 350, height: 60, backgroundColor: 'lightskyblue' }}>{item.adress}</Text>
               <View id="bottom_container" style={{ flexDirection: 'row' }}>
-                <TouchableOpacity id="share" style={{ width: 50, height: 50, backgroundColor: 'green' }}></TouchableOpacity>
-                <TouchableOpacity id="compare" style={{ width: 50, height: 50, backgroundColor: 'yellow' }}></TouchableOpacity>
-                <View id="space" style={{ width: 90, height: 50, backgroundColor: 'grey' }}></View>
-                <TouchableOpacity id="like" style={{ width: 50, height: 50, backgroundColor: 'aquamarine' }}></TouchableOpacity>
-                <TouchableOpacity id="premium" style={{ width: 120, height: 50, backgroundColor: 'red' }}></TouchableOpacity>
+                <TouchableOpacity id="share" style={{ height: 50, backgroundColor: 'green', flex: 1 }}></TouchableOpacity>
+                <TouchableOpacity id="compare" style={{ height: 50, backgroundColor: 'yellow', flex: 1 }}></TouchableOpacity>
+                <View id="space" style={{ height: 50, backgroundColor: 'grey', flex: 2 }}></View>
+                <TouchableOpacity id="like" style={{ height: 50, backgroundColor: 'aquamarine', flex: 1 }}></TouchableOpacity>
+                <TouchableOpacity id="premium" style={{ height: 50, backgroundColor: 'red', flex: 3 }}></TouchableOpacity>
               </View>
             </View>
+
 
 
           }
