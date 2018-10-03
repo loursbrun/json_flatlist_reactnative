@@ -296,3 +296,25 @@ render() {
 
 ![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step6.jpg)
 
+
+
+# Step 7
+#####Encapsulate the bottom components, and change the flexDirection to "row"
+
+```javascript
+ <View>
+              <View id="thumbnail" style={{ width: 350, height: 180, backgroundColor: 'pink' }}></View>
+              <Text id="adress" style={{ width: 350, height: 60, backgroundColor: 'lightskyblue' }}>{item.adress}</Text>
+              <View id="bottom_container" style={{ flexDirection: 'row' }}>
+                <TouchableOpacity id="share" style={{ width: 50, height: 50, backgroundColor: 'green' }}></TouchableOpacity>
+                <TouchableOpacity id="compare" style={{ width: 50, height: 50, backgroundColor: 'yellow' }}></TouchableOpacity>
+                <View id="space" style={{ width: 90, height: 50, backgroundColor: 'grey' }}></View>
+                <TouchableOpacity id="like" style={{ width: 50, height: 50, backgroundColor: 'aquamarine' }}></TouchableOpacity>
+                <TouchableOpacity id="premium" style={{ width: 120, height: 50, backgroundColor: 'red' }}></TouchableOpacity>
+              </View>
+            </View>
+
+```
+
+![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step7.jpg)
+
