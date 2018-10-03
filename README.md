@@ -8,3 +8,10 @@
 ```shell
 create-react-native-app JsonFlatlist
 ```
+
+#####Perform App On Expo
+
+
+```shell
+exp start
+```
