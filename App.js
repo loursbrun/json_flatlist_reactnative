@@ -8,7 +8,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    return fetch('https://facebook.github.io/react-native/movies.json')
+    return fetch('http://www.mocky.io/v2/5bb4f8c03000007900aabc13')
       .then((response) => response.json())
       .then((responseJson) => {
 
