@@ -253,3 +253,46 @@ import { StyleSheet, Text, View, FlatList, ActivityIndicator, TouchableOpacity }
 ```
 
 ![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step5.jpg)
+
+
+# Step 6
+#####We will create containers to accommodate the buttons
+
+![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/containers.PNG)
+
+#####Remove unused Flatlist
+
+#####Add styles for TouchableOpacity
+
+```javascript
+render() {
+    return (
+      <View style={styles.container}>
+        
+        <FlatList
+         data={this.state.dataSource}
+         renderItem={({item}) => 
+         
+         <View>
+           <View id="thumbnail" style={{width:350, height:180, backgroundColor:'pink'}}></View>
+             <Text id="adress"  style={{width:350, height:60, backgroundColor:'lightskyblue'}}>{item.adress}</Text>
+             <TouchableOpacity id="share" style={{width:50, height:50, backgroundColor:'green'}}></TouchableOpacity>
+             <TouchableOpacity id="compare" style={{width:50, height:50, backgroundColor:'yellow'}}></TouchableOpacity>
+             <View id="space" style={{width:90, height:50, backgroundColor:'grey'}}></View>
+             <TouchableOpacity id="like" style={{width:50, height:50, backgroundColor:'aquamarine'}}></TouchableOpacity>
+             <TouchableOpacity id="premium" style={{width:120, height:50, backgroundColor:'red'}}></TouchableOpacity>
+           </View>
+
+        
+        }
+         keyExtractor={({id}, index) => id}
+       />
+
+      </View>
+    );
+  }
+}
+```
+
+![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step6.jpg)
+

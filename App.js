@@ -29,30 +29,19 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <FlatList
-          data={[
-            { key: 'Devin' },
-            { key: 'Jackson' },
-            { key: 'Joel' },
-            { key: 'John' },
-            { key: 'Jillian' },
-            { key: 'Jimmy' },
-            { key: 'Julie' },
-          ]}
-          renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
-        />
+        
         <FlatList
          data={this.state.dataSource}
          renderItem={({item}) => 
          
          <View>
-             <View id="thumbnail"></View>
-             <Text id="adress">{item.adress}</Text>
-             <TouchableOpacity id="share"></TouchableOpacity>
-             <TouchableOpacity id="compare"></TouchableOpacity>
-             <View id="space"></View>
-             <TouchableOpacity id="like"></TouchableOpacity>
-             <TouchableOpacity id="premium"></TouchableOpacity>
+           <View id="thumbnail" style={{width:350, height:180, backgroundColor:'pink'}}></View>
+             <Text id="adress"  style={{width:350, height:60, backgroundColor:'lightskyblue'}}>{item.adress}</Text>
+             <TouchableOpacity id="share" style={{width:50, height:50, backgroundColor:'green'}}></TouchableOpacity>
+             <TouchableOpacity id="compare" style={{width:50, height:50, backgroundColor:'yellow'}}></TouchableOpacity>
+             <View id="space" style={{width:90, height:50, backgroundColor:'grey'}}></View>
+             <TouchableOpacity id="like" style={{width:50, height:50, backgroundColor:'aquamarine'}}></TouchableOpacity>
+             <TouchableOpacity id="premium" style={{width:120, height:50, backgroundColor:'red'}}></TouchableOpacity>
            </View>
 
         
