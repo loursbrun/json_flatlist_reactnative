@@ -163,3 +163,93 @@ return fetch('http://www.mocky.io/v2/5bb4f8c03000007900aabc13')
 #####You should have the same render
 
 ![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step3.jpg)
+
+
+# Step 5
+#####Change data with this json
+
+```json
+{
+    "title": "The Basics - Networking",
+    "description": "Your app fetched this from a remote endpoint!",
+    "adresses": [
+      { "id": "1", "adress": "73 rue lecourbe 75015 Paris", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=48,843353&lon=2,305336&height=180&width=352"},
+      { "id": "2", "adress": "place du 11 novembre 1918 69008 Lyon", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=45,737527&lon=4,86864&height=180&width=352"},
+      { "id": "3", "adress": "place massena 06000 Nice", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=43,697784&lon=7,270133&height=180&width=352"},
+      { "id": "4", "adress": "Passenans 39230 Passenans", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=46,798819&lon=5,617343&height=180&width=352"},
+      { "id": "5", "adress": "Sassenay 71530 Sassenay", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=46,830917&lon=4,920356&height=180&width=352"},
+      { "id": "6", "adress": "Cannes 06400 Cannes", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=43,552852&lon=7,017365&height=180&width=352"},
+      { "id": "7", "adress": "Paris 75000 Paris", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=48,856617&lon=2,35224&height=180&width=352"},
+      { "id": "8", "adress": "122 boulevard carnot 06300 Nice", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=43,691976&lon=7,293889&height=180&width=352"},
+      { "id": "9", "adress": "plafeix 19170 L'Église-aux-Bois", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=45,661428&lon=1,821015&height=180&width=352"},
+      { "id": "10", "adress": "teste 32100 Condom", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=43,950062&lon=0,357625&height=180&width=352"},
+      { "id": "11", "adress": "testarouch 33380 Mios", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=44,661061&lon=-0,834639&height=180&width=352"},
+      { "id": "12", "adress": "romette 05000 Gap", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=44,581078&lon=6,107564&height=180&width=352"},
+      { "id": "13", "adress": "plafeix 19170 L'Église-aux-Bois", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=45,661428&lon=1,821015&height=180&width=352"},
+      { "id": "14", "adress": "rue des 3 moulins 06600 Antibes", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=43,603807&lon=7,083869&height=180&width=352"},
+      { "id": "15", "adress": "plag d'angon 74290 Talloires-Montmin", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=45,823612&lon=6,222094&height=180&width=352"},
+      { "id": "16", "adress": "Saint-Tropez 83990 Saint-Tropez", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=43,269827&lon=6,639983&height=180&width=352"},
+      { "id": "17", "adress": "garibaldi 30240 Le Grau-du-Roi", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=43,501745&lon=4,173967&height=180&width=352"},
+      { "id": "18", "adress": "rue voltaire 33000 Bordeaux", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=44,842468&lon=-0,578595&height=180&width=352"},
+      { "id": "19", "adress": "rue stanislas baudry 44000 Nantes  ", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=47,219302&lon=-1,54432&height=180&width=352"},
+      { "id": "20", "adress": "place de clichy 75009 Paris ", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=48,883414&lon=2,327601&height=180&width=352"},
+      { "id": "21", "adress": "35A rue de berstett 67200 Strasbourg", "liked": false, "premium": false, "thumbnail": "https://www.cityscan.fr/api/maps/thumbnail/lat=48,598198&lon=7,706368&height=180&width=352"}
+    ]
+  }
+```
+
+#####Change the link of Mocky by :
+
+```javascript
+http://www.mocky.io/v2/5bb481953300006630cad649
+```
+
+#####Add touchable areas touchableOpacity
+
+######Reindente like
+```javascript
+  <FlatList
+         data={this.state.dataSource}
+         renderItem={({item}) => 
+         
+         <Text>{item.title}, {item.releaseYear}</Text>
+        
+        }
+         keyExtractor={({id}, index) => id}
+       />
+```
+
+#####Change the render with touchableOpacity component
+
+```javascript
+ <View>
+             <View id="thumbnail"></View>
+             <Text id="adress">{item.adress}</Text>
+             <TouchableOpacity id="share"></TouchableOpacity>
+             <TouchableOpacity id="compare"></TouchableOpacity>
+             <View id="space"></View>
+             <TouchableOpacity id="like"></TouchableOpacity>
+             <TouchableOpacity id="premium"></TouchableOpacity>
+           </View>
+
+```
+
+#####Change the response object to parse
+
+```javascript
+dataSource: responseJson.movies,
+```
+
+#####to
+
+```javascript
+dataSource: responseJson.adresses,
+```
+
+#####Add touchableOpacity from react-native
+
+```javascript
+import { StyleSheet, Text, View, FlatList, ActivityIndicator, TouchableOpacity } from 'react-native';
+```
+
+![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step5.jpg)

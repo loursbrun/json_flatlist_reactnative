@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, FlatList, ActivityIndicator, TouchableOpacity } from 'react-native';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -8,13 +8,13 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    return fetch('http://www.mocky.io/v2/5bb4f8c03000007900aabc13')
+    return fetch('http://www.mocky.io/v2/5bb481953300006630cad649')
       .then((response) => response.json())
       .then((responseJson) => {
 
         this.setState({
           isLoading: false,
-          dataSource: responseJson.movies,
+          dataSource: responseJson.adresses,
         }, function () {
 
         });
@@ -43,7 +43,20 @@ export default class App extends React.Component {
         />
         <FlatList
          data={this.state.dataSource}
-         renderItem={({item}) => <Text>{item.title}, {item.releaseYear}</Text>}
+         renderItem={({item}) => 
+         
+         <View>
+             <View id="thumbnail"></View>
+             <Text id="adress">{item.adress}</Text>
+             <TouchableOpacity id="share"></TouchableOpacity>
+             <TouchableOpacity id="compare"></TouchableOpacity>
+             <View id="space"></View>
+             <TouchableOpacity id="like"></TouchableOpacity>
+             <TouchableOpacity id="premium"></TouchableOpacity>
+           </View>
+
+        
+        }
          keyExtractor={({id}, index) => id}
        />
 
