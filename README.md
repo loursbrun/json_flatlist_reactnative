@@ -549,3 +549,54 @@ container: {
 ```
 
 ![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step14.jpg)
+
+
+
+
+
+# Step 15
+#####Add action to buttons (TouchableOpacity)
+
+#####React Native Doc [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity "TouchableOpacity")
+
+#####Add to share TouchableOpacity component and Add it function just above `render()`
+```javascript
+onPress={this.onPressWidthValue.bind(this,'share')}
+
+```
+
+```javascript
+onPressWidthValue = (value) => {
+   console.log("Value passed :" + value)
+ }
+
+```
+
+#####Pass one value from specific item (compare component)
+```javascript
+onPress={this.onPressWidthValue.bind(this,'share')}
+
+```
+```javascript
+onPressWidthValue = (value) => {
+   console.log("Value passed :" + value)
+ }
+
+```
+
+
+
+#####Pass all values from specific item (liked component)
+```javascript
+onPress={this.onPressWidthItemValues.bind(this,item)}
+
+```
+```javascript
+onPressWidthItemValues = (item) => {
+   console.log("Adresse :" + item.adress)
+   console.log("Liked :" + item.liked)
+   console.log("Premium :" + item.premium)
+ }
+
+```
+
