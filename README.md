@@ -523,3 +523,29 @@ container: {
 ```
 
 ![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step13.jpg)
+
+
+
+
+# Step 14
+#####Add Shadow to item
+
+#####React Native Doc [Shadow](https://ethercreative.github.io/react-native-shadow-generator/ "Shadow")
+
+```javascript
+<View id="item_container" style={{
+               margin: 20,
+               backgroundColor: 'white',
+               shadowColor: "#000",
+               shadowOffset: {
+                 width: 0,
+                 height: 6,
+               },
+               shadowOpacity: 0.37,
+               shadowRadius: 7.49,
+               elevation: 12
+           }}>
+
+```
+
+![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step14.jpg)
