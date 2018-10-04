@@ -142,6 +142,7 @@ render() {
 }
 
 ```
+
 ![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/mocky.png)
 
 
@@ -427,3 +428,17 @@ container: {
 ```
 
 ![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step10.jpg)
+
+
+
+#Step 11
+
+#####Align the star and the text "Premium"
+
+#####Add `flexDirection: 'row'`
+
+```javascript
+ <TouchableOpacity id="premium" style={{ height: 50, backgroundColor: 'red', flex: 3, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+```
+
+![](https://raw.githubusercontent.com/loursbrun/json_flatlist_reactnative/master/Image_Steps/step11.jpg)

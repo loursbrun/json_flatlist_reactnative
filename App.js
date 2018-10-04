@@ -50,7 +50,7 @@ export default class App extends React.Component {
                 <TouchableOpacity id="like" style={{ height: 50, backgroundColor: 'aquamarine', flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                   <Image source={{ uri: 'https://cdn4.iconfinder.com/data/icons/miu/24/common-heart-like-favourite-favorite-outline-stroke-512.png' }} style={{ width: 30, height: 30, tintColor: 'red' }}></Image>
                 </TouchableOpacity>
-                <TouchableOpacity id="premium" style={{ height: 50, backgroundColor: 'red', flex: 3, justifyContent: 'center', alignItems: 'center' }}>
+                <TouchableOpacity id="premium" style={{ height: 50, backgroundColor: 'red', flex: 3, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                   <Image source={{ uri: 'https://icon-icons.com/icons2/67/PNG/512/starschema_estrella_13689.png' }} style={{ width: 30, height: 30, tintColor: 'white' }}></Image>
                   <Text>Premium</Text>
                 </TouchableOpacity>
